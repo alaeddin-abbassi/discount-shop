@@ -1,0 +1,28 @@
+{
+  "ucp_version": "0.1.0",
+  "shop_name": "Agentic Coffee Roasters",
+  "description": "Ein KI-freundlicher Kaffeeshop. Wir verkaufen Bohnen und Zubehör.",
+  "capabilities": [
+    {
+      "id": "catalog_search",
+      "type": "discovery",
+      "endpoint": "/api/products",
+      "method": "GET",
+      "description": "Ruft die Liste aller verfügbaren Kaffeesorten ab."
+    },
+    {
+      "id": "cart_add",
+      "type": "transaction",
+      "endpoint": "/api/cart",
+      "method": "POST",
+      "description": "Fügt ein Produkt zum Warenkorb hinzu. Erfordert 'product_id' und 'quantity'."
+    },
+    {
+      "id": "checkout",
+      "type": "transaction",
+      "endpoint": "/api/checkout",
+      "method": "POST",
+      "description": "Schließt den Kauf ab."
+    }
+  ]
+}
